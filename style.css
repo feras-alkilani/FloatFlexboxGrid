@@ -1,0 +1,188 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+h2 {
+  text-align: center;
+}
+
+/* With Float Start */
+.container {
+  margin: 0px auto;
+  width: 693px;
+}
+.container p {
+  float: left;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container p:first-child {
+  background-color: #1abc9c;
+  width: 200px;
+  height: 150px;
+}
+.container p:nth-child(2) {
+  background-color: #e67e22;
+}
+.container p:nth-child(3) {
+  background-color: #27ae60;
+}
+.container p:nth-child(2),
+.container p:nth-child(3) {
+  height: 75px;
+  width: 340px;
+}
+.container p:nth-child(4) {
+  background-color: #ff9800;
+  width: 150px;
+  height: 150px;
+  margin-top: -75px;
+}
+.container p:nth-child(5) {
+  background-color: #3498db;
+  clear: both;
+  width: 280px;
+  height: 75px;
+}
+.container p:nth-child(6) {
+  background-color: #8e44ad;
+  height: 75px;
+  width: 136px;
+}
+.container p:nth-child(7) {
+  background-color: #2c3e50;
+  width: 416px;
+  height: 75px;
+  clear: both;
+}
+.container p:nth-child(8) {
+  background-color: #c0392b;
+  height: 150px;
+  margin-top: -75px;
+  width: 274px;
+}
+.claer {
+  clear: both;
+}
+/* With Float End */
+/* With Flex-Box */
+.conatiner-2 {
+  margin: 0 auto;
+  width: 693px;
+}
+.flexbox {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flexbox div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+}
+.flexbox div:first-child {
+  flex-basis: 200px;
+  height: 150px;
+  background-color: #1abc9c;
+}
+.flexbox div:nth-child(2) {
+  background: #e67e22;
+}
+.flexbox div:nth-child(3) {
+  background-color: #27ae60;
+  align-self: flex-end;
+  margin-left: calc(-42% + -49px);
+}
+.flexbox div:nth-child(2),
+.flexbox div:nth-child(3) {
+  height: 75px;
+  flex-basis: 340px;
+}
+.flexbox div:nth-child(4) {
+  flex-basis: 150px;
+  background: #ff9800;
+}
+.flexbox div:nth-child(5) {
+  background: #3498db;
+  flex-basis: 280px;
+  height: 75px;
+}
+.flexbox div:nth-child(6) {
+  flex-basis: 136px;
+  height: 75px;
+  background: #8e44ad;
+}
+.flexbox div:nth-child(7) {
+  flex-basis: 416px;
+  background: #2c3e50;
+  height: 75px;
+}
+.flexbox div:nth-child(8) {
+  flex-basis: 274px;
+  height: 150px;
+  background: #c0392b;
+  margin-top: -75px;
+}
+/* End With Flex-Box */
+/* With Grid */
+.container-3 {
+  margin: 0 auto;
+  width: 693px;
+}
+.container-3 .grid div {
+  display: grid;
+  place-content: center;
+  color: white;
+  font-weight: bold;
+}
+.container-3 .grid {
+  display: grid;
+  grid-template-areas:
+    "one two two two four " " one three three three four"
+    "five five six eight eight" "seven seven seven eight eight";
+  grid-template-columns: 200px 80.4px 136px 124px 150px;
+  grid-template-rows: repeat(8, 75px);
+}
+.one {
+  background-color: #1abc9c;
+  grid-area: one;
+}
+.two {
+  background-color: #e67e22;
+  grid-area: two;
+}
+.three {
+  background-color: #27ae60;
+  grid-area: three;
+}
+.four {
+  background-color: #ff9800;
+  grid-area: four;
+}
+.five {
+  background-color: #3498db;
+  grid-area: five;
+}
+.six {
+  background-color: #8e44ad;
+  grid-area: six;
+}
+.seven {
+  background-color: #2c3e50;
+  grid-area: seven;
+}
+.eight {
+  background-color: #c0392b;
+  grid-area: eight;
+}
+/* End With Grid */
